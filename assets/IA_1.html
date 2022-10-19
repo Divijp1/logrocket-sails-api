@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title> Computer Science IA</title>
+        <link rel="stylesheet" href="index2.css">
+        <script type="text/javascript">
+            window.addEventListener('scroll', reveal); 
+            
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal');
+                for(var i = 0; i < reveals.length; i++){
+                    var windowheight = window.innerHeight; 
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+
+                    if(revealtop < windowheight - revealpoint){
+                      reveals[i].classList.add('active');   
+                    }
+                    else {
+                        reveals[i].classList.remove('active'); 
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+           <section class = "section-container" id="a">
+               <div>
+                   <h1 class="height_1">Donation website</h1>
+               </div>
+           </section>
+           <section class = "section-container" id="b">
+                  <br>
+                  <br>
+                  <h1 class="container reveal">Description of website</h1>
+                  <br>
+                  <p class="container reveal">This website will be used to make donations and make exhancges with other people. In order to make donations please proceed to the donations button, upon clicking on the button you will be redirected to anohter page where you will have to fill out a form for mkaing the donation and will also have to select which NGO you would like to donate to. As for making exchanges, follow the same process as specified for the donations process.</p>
+                  <br>
+                  <p class="container reveal">The website will also feature various other functions, allowing NGOs to log in and will also send an anutomatic email to confirm your reponse</p>
+                  
+           </section>
+        
+           
+         
+           <section id="c">
+               <div class="container reveal">
+            
+                   <a href="form.html">
+                   <button type="button" class="button">Make a Donation</button>
+                   </a>
+                   
+                   <a href="exchange.html">
+                   <button type="button" class="button">make an exchange</button>
+                   </a>
+            
+                   
+               </div>
+           </section>
+    </body>
+    </html>
+       

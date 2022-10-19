@@ -1,0 +1,36 @@
+*{
+   box-sizing: border-box;
+   padding: 0cm;
+   margin: 0cm;
+   font-family: "Poppins", sans-serif;
+}
+
+    
+body{
+    background-color: black; 
+}
+
+div:nth-child(1){
+     justify-content: center;
+     color: #FFF;
+     text-align: center;
+     align-items: center;
+
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: #FFF;
+    text-align: center;
+    align-items: center;
+    width: 8cm;
+    height: 7cm;
+    
+}
+
+#login{
+    border-radius: 10cm;
+    
+}

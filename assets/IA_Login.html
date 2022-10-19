@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="IA_Login.css">
+    <script>
+        var users = [{}]
+
+//Register
+document.getElementById('registerButton').onclick = function() {
+  var newUsername = document.getElementById('registerName').value
+  var newPassword = document.getElementById('registerPassword').value
+  users.push({ username: newUsername, password: newPassword })
+}
+//Login
+document.getElementById('loginButton').onclick = function() {
+  var username = document.getElementById('loginName').value
+  var password = document.getElementById('loginPassword').value
+  for (var i = 0; i < users.length; i++) {
+    if (username == users[i].username) {
+      if (password == users[i].password) {
+        document.getElementById('loginResult').innerHTML = 'Success!'
+        return
+      } else {
+        alert('wrong password')
+      }
+    }
+  }
+
+  alert('wrong username')
+}
+    </script>
+
+</head>
+<body>
+    <div>
+        <h1>Login Page</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <div>
+            <div style="display: flex;">
+                <div id="form" style="display: flex" >
+                    <form id="login" style="border-radius: 10cm;">
+                        username<input type="text" id="loginName">
+                        <br>
+                        <br>
+                        Password<input type="password" id="loginPassword">
+                        
+                    </form>
+                    <button id="loginButton">submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>

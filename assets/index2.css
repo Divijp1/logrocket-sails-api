@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: black;
+    
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    
+  
+}
+
+section:nth-child(1){
+    justify-content: center;
+ align-items: center;
+ text-align: center;
+ color: #fff;
+ font-size:xx-large
+
+  
+}
+
+section:nth-child(2){
+    display: block;
+    justify-content: center;
+    text-align: center;
+    font-size: x-large;
+color: 1D212B;
+background: #fff;
+margin-top: 10px;
+}
+
+p{  
+    display: block; 
+    text-align: center;
+    justify-content: center;
+}
+
+section:nth-child(3){
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff
+}
+
+
+
+.button{
+    top: 50%;
+    display: absolute;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    min-height: 30px;
+    min-width: 120px; 
+}
+
+.button:hover {
+    background-color: #002ead;
+    transition: 0.7s 
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0; 
+    transition: all 0.7s ease; 
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+     
+}
+
+#div_button{
+width: 10px;
+height: 10em;
+background-color: #002ead;
+}

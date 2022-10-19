@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+    function displayQuestion(answer) {
+
+document.getElementById(answer + 'Question').style.display = "block";
+
+if (answer == "yes") { // hide the div that is not selected
+
+  document.getElementById('noQuestion').style.display = "none";
+
+} else if (answer == "no") {
+
+  document.getElementById('yesQuestion').style.display = "none";
+
+}
+
+}
+</script> 
+</head>
+<body>
+    <form name="feedback" action="javascript:void(0)">
+
+        <label>
+          <input type="radio" id="yes" name="yesOrNo" value="yes" onchange="displayQuestion(this.value)" />Yes</label>
+        <label>
+          <input type="radio" id="no" name="yesOrNo" value="no" onchange="displayQuestion(this.value)" />No</label>
+      
+        <div id="yesQuestion" style="display:none;"><br/>
+          Why did you choose yes?
+          <input type="text" placeholder="answer here . . . " />
+        </div>
+      
+        <div id="noQuestion" style="display:none;"><br/>
+          Why did you choose no?
+          <input type="text" placeholder="answer here . . . " />
+        </div>
+      
+      <br/><br/><input type="submit">
+      
+      </form>
+    
+</body>
+</html>

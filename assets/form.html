@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exchange Page</title>
+  <link rel = "stylesheet" href="form.css">
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+      const clothesOptions = ["Specify","Jeans", "T-Shirt","Belts","Shoes","Socks","Jackets","Sweater"]
+      const select = document.getElementById("clothesType");
+      for (let i = 0; i < clothesOptions.length; i++) {
+      select.add(new Option(clothesOptions[i]));
+      }
+
+
+    })
+
+    function displayQuestion(answer) {
+      console.log(answer); 
+
+      if(answer === "clothes") {
+        document.getElementById('ClothesFor').style.display = "block";
+
+    }
+
+    else if(answer === "food") {
+      document.getElementById('FoodFor').style.display = "block"; 
+    }
+    else if(answer === "medicines"){
+      document.getElementById('MedicinesFor').style.display = "block"; 
+    }
+    else if(answer === "books"){
+      document.getElementById('BooksFor').style.display = "block"; 
+    }
+
+  }
+  window.addEventListener('scroll', reveal); 
+            
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal');
+                for(var i = 0; i < reveals.length; i++){
+                    var windowheight = window.innerHeight; 
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+
+                    if(revealtop < windowheight - revealpoint){
+                      reveals[i].classList.add('active');   
+                    }
+                    else {
+                        reveals[i].classList.remove('active'); 
+                    }
+                }
+            }
+            
+
+            
+
+
+    
+  </script>
+</head>
+
+<section class="container reveal">
+  <h1>Welcome to the Donations page</h1> 
+</section>
+
+<section class="container reveal">
+<body>
+  <br>
+  <br>
+  <h1 id="heading">Please fill in the following form</h1>
+  <br>
+  <form name="feedback" action="javascript:void(0)">
+   <label>
+     <input type="radio" id="clothes" name="clothes" value="clothes" onchange="displayQuestion(this.value)" /> clothes
+   </label>
+
+   <label>
+     <input type="radio" id="food" name="food" value="food" onchange="displayQuestion(this.value)"/>food
+   </label>
+   <label>
+     <input type="radio" id="medicines" name="medicines" value="medicines" onchange="displayQuestion(this.value)"/>Medicines
+   </label>
+   <label>
+     <input type="radio" id="books" name="books" value="books" onchange="displayQuestion(this.value)" /> books
+   </label>
+
+  <div id="ClothesFor" style="display:none;" >
+    please specify the type of clothes 
+    <select id = "clothesType">
+      <!-- <option>Jeans</option>
+      <option>Tee shirts</option>
+      <option>Belts</option>
+      <option>Shoes</option>
+      <option>Socks</option>
+      <option>Jackets</option>
+      <option>sweater</option> -->
+    </select>
+   
+
+     if possible please define the condition of the item 
+     <input type="text" placeholder="answer here....">
+   </div>
+
+   <div id="FoodFor" style="display:none;">
+    please specify what food item you would be donating
+    <input type="text" placeholder="ansawer here">
+
+
+ 
+    Date on which this was bought
+    <input type="text" placeholder="answer here">
+  
+ 
+     Production date
+    <input type="text" placeholder="answer here">
+
+
+
+    Expiry Date
+    <input type="text" placeholder="answer here"> 
+  </div>
+
+  <div id="MedicinesFor" style="display:none;">
+    specify the medicine
+    <input type="text" style="display:none;">
+    specify the use of medicine
+    <input type="text" placeholder="answer here">
+    specify the production date
+    <input type="text" placeholder="answer here">
+    specify the production date
+    <input type="text" placeholder="answer here">
+    Expiration Date
+    <input type="text" placeholder="answer here">
+</div>
+
+  <div id="BooksFor" style="display:none;">
+    Name of Books
+    <input type="text" placeholder="answer here">
+  </div>
+
+
+
+
+  </form>
+
+</section>
+
+<section class="container reveal"> <h1>Thank you for making your donation</h1></section>
+
+
+    
+  
+</body>
+
+</html>

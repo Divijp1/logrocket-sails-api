@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+#a {
+  height: 2000px;
+  transform: translateY(-50%);
+  animation: 1s;
+}
+#b {
+  height: 2000px;
+}
+    </style>
+
+    <script>
+      let sectionItems = {...document.querySelectorAll('section')};
+ 
+ let options = {
+   rootMargin: '-10%',
+   threshold: 0.0
+ }
+   let observer = new IntersectionObserver(showItem, options);
+ function showItem (entries){
+   entries.forEach( entry => {
+     if(entry.Intersecting) {
+       entry.target.children[0].classlist.add('active')
+     }
+   }) 
+ }
+   sectionItems.forEach(item =>{
+ 
+ 
+ 
+   }); 
+    </script>
+    
+
+<body>
+<section id="b">
+<h1>
+    Computer Science IA 
+</h1>
+</section id="c">
+<section>
+    <h1>About the IA</h1>
+    <p>The product designed for the computer science IA is a website which is used to help aid people while making donations </p> 
+
+</section>
+
+<section id="a">
+    <button>Make a donation</button>
+    <p></p>
+    <button>Make an exchange</button>
+</section>
+</body>
+</html>
