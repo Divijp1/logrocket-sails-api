@@ -12,3 +12,4 @@ module.exports = {
      exits.success({message: 'LogRocket Sails API'});
      }
     };
+    
